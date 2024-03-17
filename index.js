@@ -26,16 +26,11 @@ const PORT = process.env.PORT;
 // socket--
 const http = require("http");
 const socketIo = require("socket.io");
+const initSocket = require("./utils/socket");
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, {
-  cors: {
-    origin: "https://upachaar-type2-frontend.onrender.com",
-    methods: ["GET", "POST"],
-    credentials: true,
-  },
-});
+const io = initSocket(server); 
 
 connectDb();
 

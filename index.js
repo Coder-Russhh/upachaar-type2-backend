@@ -21,7 +21,7 @@ const clinic = require("./routes/doctor/clinicRoutes");
 const review = require("./routes/reviewRoutes");
 
 dotenv.config();
-const PORT = process.env.PORT || 4500;
+const PORT = process.env.PORT;
 
 // socket--
 const http = require("http");

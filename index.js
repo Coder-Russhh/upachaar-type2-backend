@@ -31,7 +31,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://upachaar-prototype2-g6dulxvg1-ram-sahus-projects.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -41,7 +41,7 @@ connectDb();
 
 // CORS setup--
 const corsOptions = {
-  origin: "https://upachaar-prototype2-g6dulxvg1-ram-sahus-projects.vercel.app",
+  origin: "*",
   methods: ["GET", "POST"],
   credentials: true,
 };

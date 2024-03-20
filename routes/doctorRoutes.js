@@ -27,7 +27,7 @@ const redmiDeviceCheck = (req, res, next) => {
 
 // post routes
 router.post("/doctor-register", redmiDeviceCheck,  doctorController.doctorRegister);
-router.post("/doctor-login", doctorController.doctorLogin);//redmi lagana hai bhai
+router.post("/doctor-login",redmiDeviceCheck, doctorController.doctorLogin);//redmi lagana hai bhai
 router.put("/doctor-update/:doctorId",  doctorController.updateDoctorProfile);
 
 

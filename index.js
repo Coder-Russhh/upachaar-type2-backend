@@ -37,9 +37,10 @@ connectDb();
 // CORS setup--
 const corsOptions = {
   origin: "https://upachaar-type2-frontend.onrender.com",
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "PATCH", "DELETE"],
   credentials: true,
 };
+
 
 // Middleware using here
 app.use(cors(corsOptions));
